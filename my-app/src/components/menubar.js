@@ -24,6 +24,7 @@ const MenuBar = () => {
                     <li>About Us</li>
                     <li>Contact Us</li>                
                 </ul>
+                <button onClick={handleLoadScript}>Load</button>
                 
             </div>
         </nav>
