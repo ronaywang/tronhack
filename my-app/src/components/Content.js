@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card, Box, Stack, Typography, IconButton, Divider, Chip, Switch, Container} from '@mui/material';
 import './Content.css'
+import trash from '../trash.jfif'
 
 const Content = () => {
     return (
@@ -21,18 +22,19 @@ const Job = ({description}) => {
                 <Typography variant="body2" color="text.secondary">
                 </Typography>
                 </Stack>
-                <IconButton>
+                <IconButton position={'absolute'} left={1}>
                     Claim
                 </IconButton>
             </Box>
             <Divider />
+            <img src={trash} alt="Italian Trulli" object-fit='contain'></img>
             <Stack
                 direction="row"
                 alignItems="center"
                 justifyContent="space-between"
                 sx={{ px: 2, py: 1, bgcolor: 'background.default' }}
             >
-                <Chip>Active account</Chip>
+                
                 <Switch />
             </Stack>
         </Container>
