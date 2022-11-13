@@ -19,10 +19,11 @@ const Content = () => {
 const poststyle = {
     maxWidth: '50%',
     borderRadius: '15px',
+    boxShadow:4,
     "&:hover": {
       boxShadow: 20,
       maxWidth: '60%',
-      borderRadius:'55px'
+      borderRadius:'45px'
     },
   };
 
@@ -56,7 +57,7 @@ const Job = ({description,location,cleanImg,bounty}) => {
             
                 <Grid container item xs={7}  direction="column" justifyContent="left" alignItems="left">
                     <div className='location'><LocationOnIcon fontSize='10px'/> {location}</div>
-                    <div className='describe'><PriorityHighIcon/> {description}</div>
+                    <div className='describe'> <PriorityHighIcon/>{description}</div>
                     <Stack sx={{buttons}}>
                     <Grid item container direction="column" className='bounty'>Current bounty: {bounty}</Grid>
                     <Grid item container direction="row" justifyContent="center" alignItems="center" sx={{buttons}}>
