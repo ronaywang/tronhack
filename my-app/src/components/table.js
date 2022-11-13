@@ -18,9 +18,8 @@ return (
 <TableBody className="fullWidth">
     {fields.map(el => {
          return <TableRow key={el.ID} className="key__row">
-          <TableCell className="key__cell">
-             
-         </TableCell>
+          
+         <TableCell width="30%" style ={{backgroundImage: `url(${el.photo.map(a => {return a.url;})})`}}></TableCell>
          <TableCell className="key__cell"
                 style={{fontWeight:'bold'}}>
             {el.location}
