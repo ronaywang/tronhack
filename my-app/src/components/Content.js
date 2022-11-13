@@ -19,10 +19,7 @@ const Content = () => {
    }, []);
     return (
         <div className = "content-wrapper">
-            {data && <PostTable data={data}/>}
-            <Job description={'cleanup on aisle 5'} location={'Intersection of mass ave and beacon st'} cleanImg={trash} bounty={'100'}/>
-            <Job description={'trash'} location={'Your Moms house'} cleanImg={logo} bounty={'100'}/>
-            <Job description={'no trash'} location={'River'} cleanImg={trash} bounty={'100'}/>
+            {data && <PostTable data={data}/>}  
         </div>
     )
 }
