@@ -10,6 +10,33 @@
     position: fixed;
     width: 100%;
     z-index: 0;
+    margin: 0;
+}
+
+.submit {
+    float: right;
+    width:15vw;
+    margin:5px;
+    font-size: 1.3vw;
+    padding:2px 2px 2px 2px; 
+}
+
+.Submissions {
+    display: block;
+    float: left;
+    font: normal;
+    font-size: 1.3vw;
+    padding: 5px  10px;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    left:10px;
+    margin:0;
+    transition-duration: .75s;
+}
+
+.Submissions:hover {
+    font-size:1.5vw;
 }
   
 .header ul {
@@ -36,10 +63,13 @@
 .header .logo {
     display: block;
     float: left;
-    font: normal 2em 'Cookie';
-    padding: 10px 20px;
+    font: normal;
+    font-size: 2vw;
+    padding: 10px  10px;
     text-decoration: none;
     color: #000;
+    position: relative;
+    left:10px;
 }
   
 /* menu */

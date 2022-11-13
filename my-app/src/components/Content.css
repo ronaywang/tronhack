@@ -20,24 +20,23 @@
 }
 
 .bounty {
-    font-size: 17.5px;
+    font-size: 1.4vw;
     font-weight: 500;
     justify-content: left;
     margin-top: 50px;
 }
 
 .location {
-    justify-content: center;
     font-weight: 500;
     font-size: 2.2vw;
     margin:0px 10px 0px 10px;
-    min-width: 90%;
+    width: 25vw;
 
 }
 
 .describe {
     left: 2px;
-    font-size:22.5px;
+    font-size:1vw;
     padding-top:1px;
     justify-content: left;
 }
