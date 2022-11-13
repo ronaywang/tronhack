@@ -5,13 +5,14 @@ import './Content.css'
 const Content = () => {
     return (
         <div className = "content-wrapper">
-        <job description={'trash'}/>
-        <job description={'notrash'}/>
-     </div>
+            <Job description={'cleanup on aisle 5'}/>
+            <Job description={'trash'}/>
+            <Job description={'no trash'}/>
+        </div>
     )
 }
 
-const job = (description) => {
+const Job = ({description}) => {
     return (
         <Container className="job">
             <Box sx={{ p: 2, display: 'flex' }} z-index={2}>
