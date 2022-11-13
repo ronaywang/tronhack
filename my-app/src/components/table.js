@@ -43,7 +43,7 @@ const PostTable = ({data}) => {
    
 return (
 <Table className="key">
-   <TableHead> <TableRow> 
+   <TableHead className="table-head"> <TableRow> 
       <TableCell>Photo</TableCell>
       <TableCell>Location</TableCell>
       <TableCell>Description</TableCell>
@@ -71,16 +71,24 @@ return (
              {el.fields.description}
         </TableCell>
         <TableCell className="key__cell colorKey__layers">
-            {el.fields.bounty}
+            ${el.fields.bounty}
           </TableCell>
-          <TableCell className="key__cell"> <Box><Button variant="outlined" onClick={contributed.bind(this, el.id, el.fields.bounty+1)}>
-                            <Typography className='add'>Contribute $1</Typography>
+          <TableCell className="key__cell"> <Box><Button style={{
+        borderRadius: 35,
+        backgroundColor: "#21b6ae",
+        fontSize: "18px"
+    }}
+          variant="contained" onClick={contributed.bind(this, el.id, el.fields.bounty+1)}>
+                            <Typography className='add' variant="subtitle1">Contribute $1</Typography>
                         </Button></Box></TableCell>
 
           <TableCell className="key__cell"> <Box margin='10px'>
-                     <Button id = "btn" variant="outlined" 
+                     <Button style={{
+        borderRadius: 35,
+        fontSize: "18px"
+    }}variant="contained"
                         sx={{
-                            color:'green'
+                            color:'white'
 
                         }} onClick={claimed.bind(this, el.id)}>
                             <Typography className='claim' weight={'1000px'}>Claim</Typography>
