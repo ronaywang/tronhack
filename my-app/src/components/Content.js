@@ -16,7 +16,8 @@ const Content = () => {
 const Job = ({description}) => {
     return (
         <Container className="job">
-            <Stack>
+            <Stack direction="row">
+            <img src={trash} alt="Italian Trulli" width='300px'></img>
             <div id='describe'>{description}</div>
 
             <IconButton className='claim'>
@@ -25,7 +26,7 @@ const Job = ({description}) => {
             </Stack>
 
 
-            <img src={trash} alt="Italian Trulli" width='300px'></img>
+            
             <Stack>
             <IconButton className='claim'>
                 Contribute

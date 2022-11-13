@@ -1,0 +1,13 @@
+TRON WORKSHOP
+
+TRON IDE
+Remix
+
+Use older NPM?
+downgrade version node to 10.24.1
+
+Need to use TRON?
+
+solidity global variable: msg?? 
+sense wallet address
+built in func for transactions
