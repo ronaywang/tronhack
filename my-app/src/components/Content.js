@@ -9,8 +9,6 @@ import useData from './useData';
 import PostTable from './table';
 
 
-
-
 const Content = () => {
     const { data, getData } = useData();
    useEffect(() => {
