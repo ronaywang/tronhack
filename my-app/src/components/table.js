@@ -24,6 +24,21 @@ const PostTable = ({data}) => {
               console.log(error);
             });
   };
+
+  const contributed = async (id, amount) => {
+   const data = {
+          "fields": {
+            "bounty": amount
+          }
+        
+    }
+   axios.patch('/' +id , data).then((resp) => {
+           console.log("success!")
+         })
+         .catch(function (error) {
+           console.log(error);
+         });
+};
   
    
 return (
@@ -50,10 +65,10 @@ return (
              {el.fields.description}
         </TableCell>
         <TableCell className="key__cell colorKey__layers">
-            <div>Bounty</div>
+            {el.fields.bounty}
           </TableCell>
-          <TableCell className="key__cell"> <Box><Button variant="outlined">
-                            <Typography className='add'>Contribute</Typography>
+          <TableCell className="key__cell"> <Box><Button variant="outlined" onClick={contributed.bind(this, el.id, el.fields.bounty+1)}>
+                            <Typography className='add'>Contribute $1</Typography>
                         </Button></Box></TableCell>
 
           <TableCell className="key__cell"> <Box margin='10px'>
