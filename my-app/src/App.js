@@ -19,7 +19,7 @@ function App() {
   });
 
   const getBalance = async () => {
-    //if wallet installed and logged , getting TRX token balance
+    //if wallet installed and logged, getting TRX token balance
     if (window.tronWeb && window.tronWeb.ready) {
       let walletBalances = await window.tronWeb.trx.getAccount(
         window.tronWeb.defaultAddress.base58
@@ -41,37 +41,6 @@ function App() {
           tempBalance.balance = 0;
         }
 
-        //checking if any frozen balance exists
-        if (
-          !tempBalance.frozen &&
-          !tempBalance.account_resource.frozen_balance_for_energy
-        ) {
-          tempFrozenBalance = 0;
-        } else {
-          if (
-            tempBalance.frozen &&
-            tempBalance.account_resource.frozen_balance_for_energy
-          ) {
-            tempFrozenBalance =
-              tempBalance.frozen[0].frozen_balance +
-              tempBalance.account_resource.frozen_balance_for_energy
-                .frozen_balance;
-          }
-          if (
-            tempBalance.frozen &&
-            !tempBalance.account_resource.frozen_balance_for_energy
-          ) {
-            tempFrozenBalance = tempBalance.frozen[0].frozen_balance;
-          }
-          if (
-            !tempBalance.frozen &&
-            tempBalance.account_resource.frozen_balance_for_energy
-          ) {
-            tempFrozenBalance =
-              tempBalance.account_resource.frozen_balance_for_energy
-                .frozen_balance;
-          }
-        }
 
         //we have wallet and we are logged in
         setMyMessage(<h3>WALLET CONNECTED</h3>);
@@ -114,6 +83,17 @@ function App() {
   return (
     
     <div className="App">
+      <div className="Stats">
+          {myMessage}
+          <h4>Account Name: {myDetails.name} </h4>
+          <h4>My Address: {myDetails.address}</h4>
+          <h4>
+            Balance: {myDetails.balance} TRX (Frozen:{' '}
+            {myDetails.frozenBalance} TRX)
+          </h4>
+          <h4>Network Selected: {myDetails.network}</h4>
+          <h4>Link Established: {myDetails.link}</h4>
+        </div>
       <MenuBar/>
       
       <Content/>
