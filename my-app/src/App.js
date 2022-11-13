@@ -81,9 +81,8 @@ function App() {
   });
   
   return (
-    
     <div className="App">
-      <MenuBar/>
+    <MenuBar/>
       <div className="Stats">
           {myMessage}
           <h4>Account Name: {myDetails.name} </h4>

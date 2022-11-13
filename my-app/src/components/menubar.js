@@ -16,8 +16,6 @@ const MenuBar = () => {
         <nav className="header">
             <div className="nav-wrapper">
                 <a className="logo" href='/'>Bountiful</a>
-                <input className="menu-btn" type="checkbox" id="menu-btn"/>
-                <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
 
                 <ul className="menu">
                     <li>Home</li>

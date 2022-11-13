@@ -22,6 +22,7 @@ contract Bounty {
        uint256 price; // current TRX bid
        address delegate;
    }
+
    uint256 public postId;
 
     mapping (uint256 => Post) public posts;

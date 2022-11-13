@@ -4,6 +4,7 @@ import './Content.css'
 import trash from '../trash.jfif'
 import logo from '../logo.svg'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 
 const Content = () => {
     return (
@@ -30,13 +31,10 @@ const poststyle = {
     flex: 1,
     justifyContent: 'flex-end',
     marginBottom: 0
-      
   };
 
   const clickbutton = {
-    ml: '10px',
-    mr: '10px'
-      
+    borderRadius:'100px'
   };
 
   const imgContainer = {
@@ -57,19 +55,24 @@ const Job = ({description,location,cleanImg,bounty}) => {
                 </Grid>
             
                 <Grid container item xs={7}  direction="column" justifyContent="left" alignItems="left">
-                    <div className='location'><LocationOnIcon/> {location}</div>
-                    <div className='describe'>{description}</div>
-                    
-                    <Grid item container direction="column" border='1px solid red' className='bounty'>Current bounty: {bounty}</Grid>
-                    <Grid item container direction="row" justifyContent="center" alignItems="center" border='1px solid red' sx={{buttons}}>
+                    <div className='location'><LocationOnIcon fontSize='10px'/> {location}</div>
+                    <div className='describe'><PriorityHighIcon/> {description}</div>
+                    <Stack sx={{buttons}}>
+                    <Grid item container direction="column" className='bounty'>Current bounty: {bounty}</Grid>
+                    <Grid item container direction="row" justifyContent="center" alignItems="center" sx={{buttons}}>
                         
-                        <Button variant="outlined" sx={{clickbutton}}>
-                            <Typography className='claim'>Clean Up</Typography>
-                        </Button>
-                        <Button variant="outlined" sx={{clickbutton}}>
+                        <Box margin='10px'><Button variant="outlined" 
+                        sx={{
+                            color:'green'
+
+                        }}>
+                            <Typography className='claim' weight={'1000px'}>Clean Up</Typography>
+                        </Button></Box>
+                        <Box><Button variant="outlined" sx={{clickbutton}}>
                             <Typography className='add'>Contribute</Typography>
-                        </Button>
+                        </Button></Box>
                     </Grid>
+                    </Stack>
                 </Grid>
             </Grid>
         </Box>

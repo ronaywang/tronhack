@@ -9,7 +9,8 @@
 .claim {
     right: 10px;
     padding-top: 10px;
-    color: black;
+    color: green;
+    font-weight: 1000;
 }
 
 .add {
@@ -17,27 +18,26 @@
     padding-top: 10px;
     color:black;
 }
+
 .bounty {
-    border:1px solid red;
-    font-size: 20px;
-    font-weight: 20px;
+    font-size: 17.5px;
+    font-weight: 500;
     justify-content: left;
+    margin-top: 50px;
 }
 
 .location {
     justify-content: center;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 2.2vw;
     margin:0px 10px 0px 10px;
-    min-width: 350px;
-    border: 1px solid black;
+    min-width: 90%;
 
 }
 
 .describe {
     left: 2px;
-    border: 1px solid black;
-    font-size:15px;
+    font-size:22.5px;
     padding-top:1px;
     justify-content: left;
 }
@@ -48,3 +48,4 @@
     transition-duration: .75s;
     padding: 10px 10px 10px 10px;
 }
+
