@@ -83,6 +83,7 @@ function App() {
   return (
     
     <div className="App">
+      <MenuBar/>
       <div className="Stats">
           {myMessage}
           <h4>Account Name: {myDetails.name} </h4>
@@ -94,8 +95,8 @@ function App() {
           <h4>Network Selected: {myDetails.network}</h4>
           <h4>Link Established: {myDetails.link}</h4>
         </div>
-      <MenuBar/>
       
+
       <Content/>
     </div>
   );
