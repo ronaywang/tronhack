@@ -4,6 +4,9 @@ import {Table,  TableHead, TableBody, TableRow, TableCell, Box, Typography, Butt
 import claimed from './useData';
 import axios from 'axios';
 
+import { createMuiTheme } from '@material-ui/core/styles';
+
+
 
 const PostTable = ({data}) => {
    const fields = data.map(el => {

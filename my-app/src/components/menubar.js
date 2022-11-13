@@ -98,9 +98,7 @@ function MenuBar() {
                   <div className ='wallet' float='right'><h4>Wallet Connected: {myDetails.address}</h4></div>
                 </Grid>
                 <Grid item xs={2}>
-                    <div className='submit' float='right'>
-                        <a className="Submissions" href=' https://airtable.com/shr86g6yJ6qQsOEoI'>Submit a Bounty</a>
-                    </div>
+                  <a className="logo Submissions"  href=' https://airtable.com/shr86g6yJ6qQsOEoI'>Submit a Bounty</a>
                 </Grid>
               </Grid>
             
