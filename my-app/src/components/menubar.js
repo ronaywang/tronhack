@@ -2,8 +2,6 @@ import React, { Component, useState, useEffect } from 'react';
 import {Grid} from '@mui/material';
 import './menubar.css'
 
-
-
 function MenuBar() {
     // function handleLoadScript() {
     //     import('./gettronwallet.js')

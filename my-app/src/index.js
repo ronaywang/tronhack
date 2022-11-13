@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import axios from 'axios';
+import theme from './buttonfix';   
+import { ThemeProvider, CssBaseline } from "@mui/material";
 
 
 var Airtable = require('airtable');
@@ -16,7 +18,14 @@ axios.defaults.headers.post['Content-Type'] = 'application/json';
 //authenticate to the base with the API key 
 axios.defaults.headers['Authorization'] = 'Bearer keyxzSqtv90yqr7gE';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const app = () => (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
+  );
+
+ReactDOM.render(<App/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

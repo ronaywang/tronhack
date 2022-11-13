@@ -4,7 +4,6 @@ import {Table,  TableHead, TableBody, TableRow, TableCell, Box, Typography, Butt
 import claimed from './useData';
 import axios from 'axios';
 
-import { createMuiTheme } from '@material-ui/core/styles';
 
 
 
@@ -26,6 +25,7 @@ const PostTable = ({data}) => {
             .catch(function (error) {
               console.log(error);
             });
+      window.location.reload(true);
   };
 
   const contributed = async (id, amount) => {
@@ -41,6 +41,7 @@ const PostTable = ({data}) => {
          .catch(function (error) {
            console.log(error);
          });
+         window.location.reload(true);
 };
   
    
