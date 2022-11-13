@@ -3,7 +3,7 @@ import React from 'react'
 import './menubar.css'
 
 const MenuBar = () => {
-    //function handleLoadScript() {
+    // function handleLoadScript() {
     //     import('./gettronwallet.js')
     //       .then(({ functionFromModule }) => {
     //         // Use functionFromModule 
@@ -15,7 +15,7 @@ const MenuBar = () => {
     return (
         <nav className="header">
             <div className="nav-wrapper">
-                <a className="logo" href='/'>Your Logo</a>
+                <a className="logo" href='/'>Bountiful</a>
                 <input className="menu-btn" type="checkbox" id="menu-btn"/>
                 <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
 

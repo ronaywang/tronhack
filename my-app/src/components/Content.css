@@ -1,12 +1,9 @@
-.content-wrapper {
-    border: 1px solid red;
-    padding-top: 100px;
+.Grid {
+    border:1;
 }
 
-.job {
-    margin: 20px 0px 20px 0px;
-    border: 1px solid blue;
-    width:100px;
+.content-wrapper {
+    padding-top: 100px;
 }
 
 .claim {
@@ -16,14 +13,23 @@
 }
 
 #describe {
-    float:left;
+    justify-content: left;
     font-weight: 500;
     font-size: 30px;
-    margin:20px 10px 0px 10px;
+    margin:0px 10px 0px 10px;
+    border: 1px solid black;
 
 }
+
+#location {
+    left: 2px;
+    border: 1px solid black;
+    font-size:15px;
+}
+
 .post {
-    border: 1px solid blue;
-    max-width: 50%;
-    
+    border: 2.5px solid black;
+    margin: 30px 0px 30px 0px;
+    border-radius: 10px;
+    transition-duration: .75s;
 }
