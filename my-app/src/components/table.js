@@ -51,21 +51,19 @@ return (
       <TableCell>Contribute</TableCell>
       <TableCell>Claim</TableCell>
       </TableRow></TableHead>
-<TableBody className="fullWidth">
-    {fields.map(el => {
-         return <TableRow key={el.ID} className="key__row" height="250px">
+   <TableBody className="fullWidth">
           
-         <TableCell width="30%" padding='10px' backgroundOrigin='content-box' style ={{backgroundImage: `url(${el.photo.map(a => {return a.url;})})`,
+        
+    {data.map(el => {
+      if (el.fields.claimed === "no")
+         return <TableRow key={el.fields.ID} className="key__row" height="250px">
+          
+          <TableCell width="30%" padding='10px' backgroundOrigin='content-box' style ={{backgroundImage: `url(${el.photo.map(a => {return a.url;})})`,
                                                                                        backgroundSize: '85%', 
                                                                                        backgroundPosition: 'center center',
                                                                                        backgroundRepeat: 'no-repeat',
                                                                                        backgroundOrigin: 'content-box'
                                                                                          }}></TableCell>
-    {data.map(el => {
-      if (el.fields.claimed === "no")
-         return <TableRow key={el.fields.ID} className="key__row">
-          
-         <TableCell width="30%" style ={{backgroundImage: `url(${el.fields.photo.map(a => {return a.url;})})`}}></TableCell>
          <TableCell className="key__cell"
                 style={{fontWeight:'bold'}}>
             {el.fields.location}
