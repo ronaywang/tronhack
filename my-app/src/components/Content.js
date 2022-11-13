@@ -15,7 +15,7 @@ const Content = () => {
 
 const Job = ({description}) => {
     return (
-        <Container className="job">
+        <Container className="job" maxWidth="sm">
             <Stack direction="row">
             <img src={trash} alt="Italian Trulli" width='300px'></img>
             <div id='describe'>{description}</div>
