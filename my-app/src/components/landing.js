@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import useData from '../hooks/useData';
-import Table from '../sections/Table';
+import Table from './table';
 
 export default function Landing() {
    const { data, getData } = useData();
