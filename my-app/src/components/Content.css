@@ -22,3 +22,8 @@
     margin:20px 10px 0px 10px;
 
 }
+.post {
+    border: 1px solid blue;
+    max-width: 50%;
+    
+}
