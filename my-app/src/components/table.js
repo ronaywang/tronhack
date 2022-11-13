@@ -25,7 +25,7 @@ const PostTable = ({data}) => {
             .catch(function (error) {
               console.log(error);
             });
-      window.location.reload(true);
+            window.location.reload(true);
   };
 
   const contributed = async (id, amount) => {
