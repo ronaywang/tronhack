@@ -47,3 +47,10 @@
     padding: 10px 10px 10px 10px;
 }
 
+img { display: inline-table; margin: .33em; width: 100%; height: auto; }
+div {
+    display: inline-block;
+  }
+  div > img {
+    display: inline-block;
+  }
