@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
-
+import {Grid} from '@mui/material';
 import './menubar.css'
 
 
@@ -90,13 +90,20 @@ function MenuBar() {
     return (
         <nav className="header">
             <div className="nav-wrapper">
-                <a className="logo" href='/'>Bountiful</a>
-
-            <div className='submit' float='right'>
-                <a className="Submissions" href=' https://airtable.com/shr86g6yJ6qQsOEoI'>Submit a Bounty</a>
-            </div>
-            <div className ='wallet' float='right'><h4>Wallet Connected: {myDetails.address}</h4></div>
-                
+              <Grid container direction='row' width='100vw'>
+                <Grid item xs={2}>
+                  <a className="logo" href='/'>Bountiful</a>
+                </Grid>
+                <Grid item xs={6}>
+                  <div className ='wallet' float='right'><h4>Wallet Connected: {myDetails.address}</h4></div>
+                </Grid>
+                <Grid item xs={2}>
+                    <div className='submit' float='right'>
+                        <a className="Submissions" href=' https://airtable.com/shr86g6yJ6qQsOEoI'>Submit a Bounty</a>
+                    </div>
+                </Grid>
+              </Grid>
+            
             </div>
         </nav>
     )

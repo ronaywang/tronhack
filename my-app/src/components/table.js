@@ -1,6 +1,7 @@
 import React from 'react';
 import {Table,  TableHead, TableBody, TableRow, TableCell, Box, Typography, Button} from '@mui/material';
 
+
 const PostTable = ({data}) => {
    const fields = data.map(el => {
       return el.fields;
@@ -17,9 +18,14 @@ return (
       </TableRow></TableHead>
 <TableBody className="fullWidth">
     {fields.map(el => {
-         return <TableRow key={el.ID} className="key__row">
+         return <TableRow key={el.ID} className="key__row" height="250px">
           
-         <TableCell width="30%" style ={{backgroundImage: `url(${el.photo.map(a => {return a.url;})})`}}></TableCell>
+         <TableCell width="30%" padding='10px' backgroundOrigin='content-box' style ={{backgroundImage: `url(${el.photo.map(a => {return a.url;})})`,
+                                                                                       backgroundSize: '85%', 
+                                                                                       backgroundPosition: 'center center',
+                                                                                       backgroundRepeat: 'no-repeat',
+                                                                                       backgroundOrigin: 'content-box'
+                                                                                         }}></TableCell>
          <TableCell className="key__cell"
                 style={{fontWeight:'bold'}}>
             {el.location}
