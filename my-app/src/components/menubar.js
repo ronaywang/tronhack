@@ -17,11 +17,9 @@ const MenuBar = () => {
             <div className="nav-wrapper">
                 <a className="logo" href='/'>Bountiful</a>
 
-                <ul className="menu">
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>                
-                </ul>
+            <div className='submit' float='right'>
+                <a className="Submissions" href=' https://airtable.com/shr86g6yJ6qQsOEoI'>Submit a Bounty</a>
+            </div>
                 
             </div>
         </nav>

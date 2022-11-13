@@ -56,8 +56,8 @@ const Job = ({description,location,cleanImg,bounty}) => {
                 </Grid>
             
                 <Grid container item xs={7}  direction="column" justifyContent="left" alignItems="left">
-                    <div className='location'><LocationOnIcon fontSize='10px'/> {location}</div>
-                    <div className='describe'> <PriorityHighIcon/>{description}</div>
+                    <div className='location'><LocationOnIcon fontSize='.6vw'/> {location}</div>
+                    <div className='describe'><PriorityHighIcon fontSize='.4vw'/>{description}</div>
                     <Stack sx={{buttons}}>
                     <Grid item container direction="column" className='bounty'>Current bounty: {bounty}</Grid>
                     <Grid item container direction="row" justifyContent="center" alignItems="center" sx={{buttons}}>
