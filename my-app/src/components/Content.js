@@ -1,14 +1,27 @@
-import React from 'react'
-import {Card, Box, Button, Stack, Typography, IconButton, Divider, Chip, Switch, Container, Grid} from '@mui/material';
+import React, { useEffect }  from 'react'
+import {Box, Button, Stack, Typography, IconButton, Divider, Chip, Switch, Container, Grid} from '@mui/material';
 import './Content.css'
 import trash from '../trash.jfif'
 import logo from '../logo.svg'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
+import useData from './useData';
+import PostTable from './table';
+
+
+
 
 const Content = () => {
+    const { data, getData } = useData();
+   useEffect(() => {
+      async function onPageLoad () {
+          await getData();
+       }
+     onPageLoad();
+   }, []);
     return (
         <div className = "content-wrapper">
+            {data && <PostTable data={data}/>}
             <Job description={'cleanup on aisle 5'} location={'Intersection of mass ave and beacon st'} cleanImg={trash} bounty={'100'}/>
             <Job description={'trash'} location={'Your Moms house'} cleanImg={logo} bounty={'100'}/>
             <Job description={'no trash'} location={'River'} cleanImg={trash} bounty={'100'}/>
