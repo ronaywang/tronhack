@@ -7,29 +7,44 @@
 }
 
 .claim {
-    float: right;
     right: 10px;
     padding-top: 10px;
+    color: black;
 }
 
-#describe {
+.add {
+    right: 10px;
+    padding-top: 10px;
+    color:black;
+}
+.bounty {
+    border:1px solid red;
+    font-size: 20px;
+    font-weight: 20px;
     justify-content: left;
+}
+
+.location {
+    justify-content: center;
     font-weight: 500;
     font-size: 30px;
     margin:0px 10px 0px 10px;
+    min-width: 350px;
     border: 1px solid black;
 
 }
 
-#location {
+.describe {
     left: 2px;
     border: 1px solid black;
     font-size:15px;
+    padding-top:1px;
+    justify-content: left;
 }
 
 .post {
     border: 2.5px solid black;
     margin: 30px 0px 30px 0px;
-    border-radius: 10px;
     transition-duration: .75s;
+    padding: 10px 10px 10px 10px;
 }
