@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MenuBar from './components/menubar'
+import Content from './components/Content'
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
     <div className="App">
       <MenuBar/>
       <header className="App-header">
-        
+        <Content/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> a save to reload.
