@@ -15,3 +15,16 @@ return {
    data
   }
 };
+
+export function claimed() {
+    axios.post('/', {
+            "fields": {
+             "claim": "yes"
+         }
+         }).then((resp) => {
+            console.log("success!")
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+};
