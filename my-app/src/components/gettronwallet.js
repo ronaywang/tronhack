@@ -1,3 +1,7 @@
-if(window.tronWeb && window.tronWeb.defaultAddress.base58){
-        document.write("Yes, catch it:",window.tronWeb.defaultAddress.base58)
-    }
+var tronWeb;
+var obj = setInterval(async () => {
+        if (window.tronWeb && window.tronWeb.defaultAddress.base58) {
+                clearInterval(obj)
+                var tronweb = window.tronWeb
+        }
+}, 100);
